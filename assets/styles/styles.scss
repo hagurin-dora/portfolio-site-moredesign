@@ -1,0 +1,14 @@
+/*
+全てのscssを読み込むファイル
+@useで読み込むこと
+*/
+@use "global";
+@use "components";
+@use "layouts";
+@use "libs";
+@use "pages/front-page";
+@use "pages/about";
+@use "pages/service";
+@use "pages/works";
+@use "pages/contact";
+@use "pages/single";

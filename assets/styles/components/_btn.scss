@@ -1,0 +1,34 @@
+/** @format */
+
+@use "../global" as g;
+@use"../global/mixin" as m;
+
+// ボタンの処理
+
+@mixin buttonstyle($background-color: #E9E9E9, $margin-top: 32px,$margin-bottom: 0px) {
+  display: inline-block;
+  height: 88px;
+  line-height: 88px;
+  width: 272px;
+  background-color: $background-color;
+  position: relative;
+  text-align: center;
+  border-radius: 45px;
+  margin-top: $margin-top;
+  margin-bottom: $margin-bottom;
+  cursor: pointer;
+  transition: all .2s;
+
+  @include m.mq(sp) {
+    width: 100%;
+  }
+}
+
+// ボタンhover時の処理
+@mixin hoverstyle {
+  background-color: #333;
+}
+
+@mixin hoverstyle_a {
+  color: #fff;
+}

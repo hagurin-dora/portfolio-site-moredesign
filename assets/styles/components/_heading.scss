@@ -1,0 +1,32 @@
+/** @format */
+
+@use "../global" as g;
+@use"../global/mixin" as m;
+
+// 見出しの処理
+@mixin sectiontitle {
+  color: g.$font-color;
+  font-family: g.$font-family;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: g.$letter-spacing;
+  line-height: g.$line-height;
+
+  @include m.mq(sp) {
+    font-size: 1.5rem;
+  }
+}
+
+@mixin subtitle {
+  color: g.$font-color;
+  font-family: g.$font-family;
+  font-size: g.$font-size;
+  font-weight: bold;
+  letter-spacing: g.$letter-spacing;
+  line-height: g.$line-height;
+  margin-top: 4px;
+
+  @include m.mq(sp) {
+    font-size: 0.75rem;
+  }
+}

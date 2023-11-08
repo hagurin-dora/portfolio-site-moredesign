@@ -1,0 +1,23 @@
+@use "../../global" as g;
+@use "../../components" as c;
+
+// --各セクション共通クラス--
+// .section__title {
+//   @include c.sectiontitle;
+// }
+
+// .sub__title {
+//   @include c.subtitle;
+// }
+
+// .sitemap__subpage .section__wrapper {
+//   width: 100%;
+//   margin-top: 104px;
+//   margin-bottom: 80px;
+//   padding: 0 20px;
+//   text-align: center;
+
+//   .title__wrapper {
+//     margin-bottom: 32px;
+//   }
+// }

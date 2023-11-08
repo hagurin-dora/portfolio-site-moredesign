@@ -1,0 +1,25 @@
+@use "../../global" as g;
+@use "../../components" as c;
+
+// --各セクション共通クラス--
+.section__title {
+  @include c.sectiontitle;
+}
+
+.sub__title {
+  @include c.subtitle;
+}
+
+.wrapper {
+  @include g.wrapper;
+}
+
+// --Contact__sabpageSection--
+.contact__subpage .wrapper {
+  @include g.wrapper(104px auto 80px);
+
+  .title__wrapper {
+    margin-bottom: 80px;
+  }
+}
+

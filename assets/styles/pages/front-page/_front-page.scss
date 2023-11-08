@@ -1,0 +1,415 @@
+/** @format */
+
+@use "../../global" as g;
+@use "../../components" as c;
+
+
+// --各セクション共通クラス--
+.section__title {
+  @include c.sectiontitle;
+}
+
+.sub__title {
+  @include c.subtitle;
+}
+
+.wrapper {
+  @include g.wrapper;
+}
+
+// --FirstView--
+.fv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../img/common/firstview_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  margin-bottom: 80px;
+
+  .fv__wrapper {
+    margin: 0 auto;
+    text-align: center;
+    .fv__site-title {
+      color: g.$font-color;
+      font-family: g.$font-family;
+      font-size: 3rem;
+      font-weight: bold;
+      letter-spacing: g.$letter-spacing;
+      line-height: g.$line-height;
+      margin-bottom: 24px;
+    }
+    .fv__text {
+      color: g.$font-color;
+      font-family: g.$font-family;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: g.$letter-spacing;
+      line-height: g.$line-height;
+      margin-bottom: 48px;
+    }
+    .fv__small-text {
+      color: g.$font-color;
+      font-family: g.$font-family;
+      font-size: g.$font-size;
+      font-weight: bold;
+      letter-spacing: g.$letter-spacing;
+      line-height: g.$line-height;
+    }
+  }
+}
+
+// --ServiceSection--
+
+.service .wrapper .title__wrapper {
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.service .wrapper .service__menu {
+  display: flex;
+  justify-content: space-between;
+    
+  .service__item {
+    width: 32%;
+    border: 2px solid #BBB;
+    border-radius: 30px;
+    padding: 40px 24px;
+    
+    .service__img {
+      text-align: center;
+    }
+  
+    .service__text {
+      color: g.$font-color;
+      font-family: g.$font-family;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: g.$letter-spacing;
+      line-height: g.$line-height;
+      text-align: center;
+      margin-top: 64px;
+    }
+  
+    .service__subtext {
+      color: g.$font-color;
+      font-family: g.$font-family;
+      font-size: g.$font-size;
+      letter-spacing: g.$letter-spacing;
+      text-align: left;
+      line-height: g.$line-height;
+      margin-top: 40px;
+    }
+  }
+}
+
+.service .wrapper .button {
+  @include c.buttonstyle;
+  
+  &:hover {
+  @include c.hoverstyle;
+    }
+
+  p {
+    color: g.$font-color;
+    font-family: g.$font-family;
+    font-size: g.$font-size;
+    font-weight: bold;
+
+    &:hover {
+      @include c.hoverstyle_a
+    }
+  }
+}
+
+// --WorksSection--
+.works {
+  background-color: #E9E9E9;
+
+  .wrapper .title__wrapper {
+    padding-top: 80px;
+    margin-bottom: 32px;
+    text-align: center;
+  }
+}
+
+// --Slider--
+.works .wrapper .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  // max-width: 1440px;
+  position: relative;
+
+  .swiper {
+    max-width: 100%;
+    // max-width: 1440px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    .swiper-wrapper {
+      height: 232px;
+      display: flex;
+      align-items: center;
+    
+      .swiper-slide {
+        text-align: center;
+        line-height: 232px;
+
+        img {
+          width: 90%;
+          height: auto;
+        }
+      }
+    }
+  }
+  
+  .swiper-pageWrap {
+    position: relative;
+    height: 48px;
+  }
+  .swiper-navWrap{
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 232px;
+    top: 0;
+    left: 0;
+
+    /* 共通部分 */
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+
+  &:after {
+    position: absolute;
+    content: ""; /* 空指定してデフォルトの矢印を消す */
+    width: 0;
+    height: 0;
+    border-style: solid;
+    // top: -50%;
+  }
+}
+
+/* 次へ矢印をカスタマイズ */
+.swiper-button-next {
+  right: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 3px;
+    width: 40px; /* 横幅 */
+    height: 40px; /* 高さ */
+    border-radius: 50%; /* 角の丸み */
+    background: #fff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 8px;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(45deg);
+  }
+}
+
+/* 前へ矢印をカスタマイズ */
+.swiper-button-prev {
+  left: 25px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 3px;
+    width: 40px; /* 横幅 */
+    height: 40px; /* 高さ */
+    border-radius: 50%; /* 角の丸み */
+    background: #fff;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    border-top: 3px solid #333;
+    border-right: 3px solid #333;
+    transform: rotate(-135deg);
+  }
+}
+
+    // .swiper-button-prev {
+    //   &::after {
+    //     margin-right: 100px;
+    //   }
+    // }
+
+    // .swiper-button-next  {
+    //   &::after {
+    //     margin-left: 100px;
+    //   }
+    // }
+  }
+}
+  // .swiper-button-prev {
+  //   position: ;
+  // }
+
+.works .wrapper .button {
+  @include c.buttonstyle(#ffffff, 32px, 80px);
+  &:hover {
+    @include c.hoverstyle;
+  }
+
+  p {
+    color: g.$font-color;
+    font-family: g.$font-family;
+    font-size: g.$font-size;
+    font-weight: bold;
+    &:hover {
+      @include c.hoverstyle_a
+    }
+  }
+}
+
+
+// --AboutSection--
+.about .wrapper .title__wrapper{
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.about .wrapper .about__profile {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  .about__img img {
+    width: 100%;
+  }
+
+  // .about__text p {
+  //   margin-left: 32px;
+  // }
+}
+
+// --ContactSection--
+.contact .wrapper .title__wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact .wrapper .contact__text {
+  text-align: center;
+
+  p {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.contact .wrapper .button {
+  @include c.buttonstyle;
+  &:hover {
+    @include c.hoverstyle;
+  }
+
+  p {
+    color: g.$font-color;
+    font-family: g.$font-family;
+    font-size: g.$font-size;
+    font-weight: bold;
+    &:hover {
+      @include c.hoverstyle_a
+    }
+  }
+}
+
+
+// --JavascriptAnimation--
+.fadeInBefore {
+  opacity: 0;
+  transition-duration: 1.2s;
+  transition-property: opacity, transform;
+}
+
+.fadeInAfter {
+  transform: translate(0);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// --Responsive(1000px~)--
+@media screen and (max-width: 1000px) {
+  // --ServiceSection--
+  .service .wrapper .service__menu {
+    flex-direction: column;
+    gap: 32px;
+
+    .service__item {
+      width: 100%;
+      margin: 0 auto;
+      text-align: center;
+
+      .service__subtext {
+        text-align: left;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// --Responsive(768px~)--
+@media screen and (max-width: 768px) {
+  .about .wrapper .about__profile {
+    display: flex;
+    flex-flow: column;
+    row-gap: 32px;
+
+    // p {
+    //   margin-top: 32px;
+    // }
+  }
+}
+
+// --Responsive(480px~)--
+@media screen and (max-width: 480px) {
+  .fv .fv__wrapper .fv__site-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  .fv .fv__wrapper .fv__text {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .fv .fv__wrapper .fv__small-text {
+    font-size: 0.75rem;
+  }
+}

@@ -1,0 +1,214 @@
+/** @format */
+
+@use "../../global" as g;
+@use "../../components" as c;
+
+// --各セクション共通クラス--
+.section__title {
+  @include c.sectiontitle;
+}
+
+.sub__title {
+  @include c.subtitle;
+}
+
+.wrapper {
+  @include g.wrapper;
+}
+
+// --Works__subpageSection--
+.works__subpage .wrapper {
+  @include g.wrapper(104px auto 80px);
+
+  .title__wrapper {
+    margin-bottom: 32px;
+  }
+
+  .works__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    // grid-template-columns: repeat(3, 320px);
+    // grid-template-rows: repeat(2, 248px);
+    gap: 88px 56px;
+    justify-content: center;
+
+    .works__list-item .list-item__title {
+      margin-top: 16px;
+      font-weight: bold;
+    }
+  }
+  .works__list-pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+
+    .pagination__prev {
+      display: inline-block;
+      vertical-align: middle;
+      color: #E9E9E9;
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+      background: currentColor;
+      box-sizing: content-box;
+      text-align: center;
+      line-height: 2rem;
+      margin-right: 8px;
+
+      ::after {
+        content: "";
+        border: 0;
+        border-top: solid 2px #333;
+        border-left: solid 2px #333;
+        display: inline-block;
+        transform: rotate(-45deg);
+        width: 10px;
+        height: 10px;
+      }
+    }
+    .pagination__next {
+      display: inline-block;
+      vertical-align: middle;
+      color: #E9E9E9;
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+      background: currentColor;
+      box-sizing: content-box;
+      text-align: center;
+      line-height: 2rem;
+      margin-left: 8px;
+
+      ::after {
+        content: "";
+        border: 0;
+        border-top: solid 2px #333;
+        border-right: solid 2px #333;
+        display: inline-block;
+        transform: rotate(45deg);
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    .page-number {
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+      color: g.$font-color;
+      position: relative;
+      width: 2rem;
+      height: 2rem;
+      background: #E9E9E9;
+      box-sizing: content-box;
+      text-align: center;
+      line-height: 2rem;
+    }
+  }
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+  color:#999;
+  background-color:#FFF;
+  border:solid 1px #999;
+  padding: 8px 15px;
+ margin:0 2px;
+  white-space: nowrap;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-transition: 0.2s ease-in-out;
+  -moz-transition: 0.2s ease-in-out;
+  -o-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+.wp-pagenavi a:hover{
+  color:#FFF;
+  background-color:#999;
+  border-color:#999;
+}
+.wp-pagenavi span.current{
+  color:#FFF;
+  background-color:#333;
+  border-color:#333;
+  font-weight: bold;
+}
+
+// --ContactSection--
+.contact .wrapper .title__wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact .wrapper .contact__text {
+  text-align: center;
+
+  p {
+    display: inline-block;
+    text-align: left;
+  }
+}
+
+.contact .wrapper .button {
+  @include c.buttonstyle;
+  &:hover {
+    @include c.hoverstyle;
+  }
+
+  p {
+    color: g.$font-color;
+    font-family: g.$font-family;
+    font-size: g.$font-size;
+    font-weight: bold;
+    &:hover {
+      @include c.hoverstyle_a
+    }
+  }
+}
+
+// --Responsive(1000px~)--
+@media screen and (max-width: 1000px) {
+  .works__subpage .wrapper .works__list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    // grid-template-columns: repeat(2, 240px);
+    // grid-template-rows: repeat(2, 180px);
+    gap: 32px 32px;
+    justify-content: center;
+
+    img {
+      max-width: 280px;
+      max-height: 210px;
+      // max-width: 240px;
+      // max-height: 180px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .works__subpage .wrapper .works__list {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    // grid-template-columns: repeat(1, 320px);
+    // grid-template-rows: repeat(4, 248px);
+
+    img {
+      max-width: 320px;
+      max-height: 200px;
+    }
+  }
+}
+
+// @media screen and (max-width: 480px) {
+//   .works__subpage .section__wrapper .works__list {
+//     grid-template-columns: repeat(1, 320px);
+//     grid-template-rows: repeat(4, 248px);
+//     gap: 16px 8px;
+//     justify-content: center;
+
+//     img {
+//       max-width: 320px;
+//       max-height: 200px;
+//     }
+//   }
+// }
+
+

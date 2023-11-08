@@ -1,0 +1,1876 @@
+@charset "UTF-8";
+/** @format */ /** @format */
+body {
+  color: #333;
+  background-color: #fff;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+li {
+  list-style: none;
+}
+
+/*! destyle.css v3.0.2 | MIT License | https://github.com/nicolas-cusan/destyle.css */
+/* Reset box-model and set borders */
+/* ============================================ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0;
+}
+
+/* Document */
+/* ============================================ */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ * 3. Remove gray overlay on links for iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -webkit-tap-highlight-color: transparent; /* 3*/
+}
+
+/* Sections */
+/* ============================================ */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/* Vertical rhythm */
+/* ============================================ */
+p,
+table,
+blockquote,
+address,
+pre,
+iframe,
+form,
+figure,
+dl {
+  margin: 0;
+}
+
+/* Headings */
+/* ============================================ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  margin: 0;
+}
+
+/* Lists (enumeration) */
+/* ============================================ */
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Lists (definition) */
+/* ============================================ */
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+}
+
+/* Grouping content */
+/* ============================================ */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+  border-top-width: 1px;
+  margin: 0;
+  clear: both;
+  color: inherit;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+address {
+  font-style: inherit;
+}
+
+/* Text-level semantics */
+/* ============================================ */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: inherit;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: inherit; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Replaced content */
+/* ============================================ */
+/**
+ * Prevent vertical alignment issues.
+ */
+svg,
+img,
+embed,
+object,
+iframe {
+  vertical-align: bottom;
+}
+
+/* Forms */
+/* ============================================ */
+/**
+ * Reset form fields to make them styleable.
+ * 1. Make form elements stylable across systems iOS especially.
+ * 2. Inherit text-transform from parent.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  -webkit-appearance: none; /* 1 */
+  -moz-appearance: none;
+       appearance: none;
+  vertical-align: middle;
+  color: inherit;
+  font: inherit;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+  border-radius: 0;
+  text-align: inherit;
+  text-transform: inherit; /* 2 */
+}
+
+/**
+ * Reset radio and checkbox appearance to preserve their look in iOS.
+ */
+[type=checkbox] {
+  -webkit-appearance: checkbox;
+  -moz-appearance: checkbox;
+       appearance: checkbox;
+}
+
+[type=radio] {
+  -webkit-appearance: radio;
+  -moz-appearance: radio;
+       appearance: radio;
+}
+
+/**
+ * Correct cursors for clickable elements.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  cursor: pointer;
+}
+
+button:disabled,
+[type=button]:disabled,
+[type=reset]:disabled,
+[type=submit]:disabled {
+  cursor: default;
+}
+
+/**
+ * Improve outlines for Firefox and unify style with input elements & buttons.
+ */
+:-moz-focusring {
+  outline: auto;
+}
+
+select:disabled {
+  opacity: inherit;
+}
+
+/**
+ * Remove padding
+ */
+option {
+  padding: 0;
+}
+
+/**
+ * Reset to invisible
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the outline style in Safari.
+ */
+[type=search] {
+  outline-offset: -2px; /* 1 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Fix font inheritance.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/**
+ * Clickable labels
+ */
+label[for] {
+  cursor: pointer;
+}
+
+/* Interactive */
+/* ============================================ */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/*
+ * Remove outline for editable content.
+ */
+[contenteditable]:focus {
+  outline: auto;
+}
+
+/* Tables */
+/* ============================================ */
+/**
+1. Correct table border color inheritance in all Chrome and Safari.
+*/
+table {
+  border-color: inherit; /* 1 */
+  border-collapse: collapse;
+}
+
+caption {
+  text-align: left;
+}
+
+td,
+th {
+  vertical-align: top;
+  padding: 0;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+}
+
+/** @format */ /** @format */ /** @format */
+body {
+  color: #333;
+  background-color: #fff;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.header {
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 20;
+}
+.header .header__wrapper {
+  -webkit-box-align: center;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: space-between;
+  max-width: 1200px;
+  height: 100%;
+  padding: 0 20px;
+}
+.header .header__wrapper .site__title .header__logo {
+  font-size: 2.25rem;
+  font-weight: bold;
+  line-height: 1.5;
+  white-space: nowrap;
+  position: relative;
+  z-index: 30;
+}
+.header .header__wrapper .header__nav .header-list {
+  display: flex;
+}
+.header .header__wrapper .header__nav .header-list .header-list__item {
+  font-size: 1rem;
+  margin-left: 24px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+.header .header__wrapper .header__nav .header-list .header-list__item:hover {
+  opacity: 0.3;
+}
+.header #hamburger-icon {
+  display: none;
+}
+.header #hamburger-icon span {
+  width: 40px;
+  height: 3px;
+  position: absolute;
+  left: 22px;
+  background-color: #000000;
+  transition: all 0.4s;
+}
+.header #hamburger-icon span:nth-child(1) {
+  top: 24px;
+}
+.header #hamburger-icon span:nth-child(2) {
+  top: 40px;
+}
+.header #hamburger-icon span:nth-child(3) {
+  top: 56px;
+}
+.header .hamburger__nav {
+  position: fixed;
+  top: -5000px;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
+  padding: 96px 110px;
+  transition: all 0.5s;
+  opacity: 0;
+}
+.header .hamburger__nav #hamburger__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+}
+.header .hamburger__nav #hamburger__list li {
+  width: 100%;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .header .header__wrapper .site__title #header__logo {
+    font-size: 1.5rem;
+  }
+  .header .header__wrapper .site__title #header__logo.active {
+    color: #fff;
+  }
+  .header__nav .header-list .header-list__item {
+    display: none;
+  }
+  .header #hamburger-icon {
+    display: block;
+    width: 80px;
+    height: 80px;
+    position: relative;
+    z-index: 80;
+    cursor: pointer;
+  }
+  .header #hamburger-icon span .hamburger-icon__line {
+    width: 40px;
+    height: 3px;
+    position: absolute;
+    left: 22px;
+    background-color: #000;
+    transition: all 0.4s;
+  }
+  .header #hamburger-icon span .hamburger-icon__line:nth-child(1) {
+    top: 16px;
+  }
+  .header #hamburger-icon span .hamburger-icon__line:nth-child(2) {
+    top: 30px;
+  }
+  .header #hamburger-icon span .hamburger-icon__line:nth-child(3) {
+    top: 44px;
+  }
+}
+#hamburger-icon.active {
+  background-color: #000000;
+}
+
+#hamburger-icon span.active {
+  background-color: #000000;
+}
+#hamburger-icon span.active:nth-child(1).active {
+  transform: translateY(14px) rotate(-45deg);
+  background-color: #fff;
+}
+#hamburger-icon span.active:nth-child(2).active {
+  opacity: 0;
+}
+#hamburger-icon span.active:nth-child(3).active {
+  transform: translateY(-18px) rotate(45deg);
+  background-color: #fff;
+}
+
+#hamburger__mask {
+  display: none;
+  transition: all 0.5s;
+}
+
+#hamburger__mask.active {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.active .hamburger__nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  color: #fff;
+  background-color: #000;
+  padding: 96px 110px;
+  transition: all 0.5s;
+  opacity: 1;
+}
+.active .hamburger__nav #hamburger__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  opacity: 1;
+}
+.active .hamburger__nav #hamburger__list li {
+  width: 100%;
+  font-size: 1.5rem;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.05;
+  text-align: center;
+  padding-bottom: 24px;
+}
+
+/** @format */
+body {
+  color: #333;
+  background-color: #fff;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+footer {
+  background-color: #D9D9D9;
+  text-align: center;
+  width: 100%;
+  height: 80px;
+}
+footer .footer__text {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 80px;
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  footer .footer__text {
+    font-size: 0.75rem;
+  }
+}
+/** @format */
+/* Slider */
+.slick-loading .slick-list {
+  background: #fff slick-image-url("ajax-loader.gif") center center no-repeat;
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: absolute;
+  display: none !important;
+  height: 20px;
+  width: 20px;
+  line-height: 0px;
+  font-size: 0px;
+  cursor: pointer;
+  background: transparent;
+  color: transparent;
+  top: 50%;
+  transform: translate(0, -50%);
+  padding: 0;
+  border: none;
+  outline: none;
+}
+.slick-prev:hover, .slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+  outline: none;
+  background: transparent;
+  color: transparent;
+}
+.slick-prev:hover:before, .slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+  opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0.25;
+}
+.slick-prev:before,
+.slick-next:before {
+  font-family: "slick";
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+  opacity: 0.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev {
+  left: 25px;
+}
+[dir=rtl] .slick-prev {
+  left: auto;
+}
+.slick-prev:before {
+  content: "←";
+}
+[dir=rtl] .slick-prev:before {
+  content: "→";
+}
+
+.slick-next {
+  right: 25px;
+}
+[dir=rtl] .slick-next {
+  right: auto;
+}
+.slick-next:before {
+  content: "→";
+}
+[dir=rtl] .slick-next:before {
+  content: "←";
+}
+
+/* Dots */
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+}
+
+.slick-dots {
+  position: absolute;
+  bottom: -35px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 20px;
+  width: 20px;
+  outline: none;
+  line-height: 0px;
+  font-size: 0px;
+  color: transparent;
+  padding: 5px;
+  cursor: pointer;
+}
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+.slick-dots li button:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "•";
+  width: 20px;
+  height: 20px;
+  font-family: "slick";
+  font-size: 30px;
+  line-height: 20px;
+  text-align: center;
+  color: #dddddd;
+  opacity: 0.25;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.slick-dots li.slick-active button:before {
+  color: #dddddd;
+  opacity: 0.75;
+}
+
+/** @format */
+.section__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+@media screen and (max-width: 480px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+
+.sub__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+@media screen and (max-width: 480px) {
+  .sub__title {
+    font-size: 0.75rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+.fv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../img/common/firstview_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center bottom;
+  position: relative;
+  margin-bottom: 80px;
+}
+.fv .fv__wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+.fv .fv__wrapper .fv__site-title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.fv .fv__wrapper .fv__text {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-bottom: 48px;
+}
+.fv .fv__wrapper .fv__small-text {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+
+.service .wrapper .title__wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.service .wrapper .service__menu {
+  display: flex;
+  justify-content: space-between;
+}
+.service .wrapper .service__menu .service__item {
+  width: 32%;
+  border: 2px solid #BBB;
+  border-radius: 30px;
+  padding: 40px 24px;
+}
+.service .wrapper .service__menu .service__item .service__img {
+  text-align: center;
+}
+.service .wrapper .service__menu .service__item .service__text {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 64px;
+}
+.service .wrapper .service__menu .service__item .service__subtext {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  text-align: left;
+  line-height: 1.5;
+  margin-top: 40px;
+}
+
+.service .wrapper .button {
+  display: inline-block;
+  height: 88px;
+  line-height: 88px;
+  width: 272px;
+  background-color: #E9E9E9;
+  position: relative;
+  text-align: center;
+  border-radius: 45px;
+  margin-top: 32px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .service .wrapper .button {
+    width: 100%;
+  }
+}
+.service .wrapper .button:hover {
+  background-color: #333;
+}
+.service .wrapper .button p {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.service .wrapper .button p:hover {
+  color: #fff;
+}
+
+.works {
+  background-color: #E9E9E9;
+}
+.works .wrapper .title__wrapper {
+  padding-top: 80px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.works .wrapper .container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  position: relative;
+}
+.works .wrapper .container .swiper {
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+}
+.works .wrapper .container .swiper .swiper-wrapper {
+  height: 232px;
+  display: flex;
+  align-items: center;
+}
+.works .wrapper .container .swiper .swiper-wrapper .swiper-slide {
+  text-align: center;
+  line-height: 232px;
+}
+.works .wrapper .container .swiper .swiper-wrapper .swiper-slide img {
+  width: 90%;
+  height: auto;
+}
+.works .wrapper .container .swiper-pageWrap {
+  position: relative;
+  height: 48px;
+}
+.works .wrapper .container .swiper-navWrap {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 232px;
+  top: 0;
+  left: 0;
+  /* 共通部分 */
+  /* 次へ矢印をカスタマイズ */
+  /* 前へ矢印をカスタマイズ */
+}
+.works .wrapper .container .swiper-navWrap .swiper-button-next,
+.works .wrapper .container .swiper-navWrap .swiper-button-prev {
+  position: absolute;
+  top: 50%;
+}
+.works .wrapper .container .swiper-navWrap .swiper-button-next:after,
+.works .wrapper .container .swiper-navWrap .swiper-button-prev:after {
+  position: absolute;
+  content: ""; /* 空指定してデフォルトの矢印を消す */
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+.works .wrapper .container .swiper-navWrap .swiper-button-next {
+  right: 25px;
+}
+.works .wrapper .container .swiper-navWrap .swiper-button-next::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 3px;
+  width: 40px; /* 横幅 */
+  height: 40px; /* 高さ */
+  border-radius: 50%; /* 角の丸み */
+  background: #fff;
+}
+.works .wrapper .container .swiper-navWrap .swiper-button-next::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 8px;
+  width: 18px;
+  height: 18px;
+  border-top: 3px solid #333;
+  border-right: 3px solid #333;
+  transform: rotate(45deg);
+}
+.works .wrapper .container .swiper-navWrap .swiper-button-prev {
+  left: 25px;
+}
+.works .wrapper .container .swiper-navWrap .swiper-button-prev::before {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 3px;
+  width: 40px; /* 横幅 */
+  height: 40px; /* 高さ */
+  border-radius: 50%; /* 角の丸み */
+  background: #fff;
+}
+.works .wrapper .container .swiper-navWrap .swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 8px;
+  width: 18px;
+  height: 18px;
+  border-top: 3px solid #333;
+  border-right: 3px solid #333;
+  transform: rotate(-135deg);
+}
+
+.works .wrapper .button {
+  display: inline-block;
+  height: 88px;
+  line-height: 88px;
+  width: 272px;
+  background-color: #ffffff;
+  position: relative;
+  text-align: center;
+  border-radius: 45px;
+  margin-top: 32px;
+  margin-bottom: 80px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .works .wrapper .button {
+    width: 100%;
+  }
+}
+.works .wrapper .button:hover {
+  background-color: #333;
+}
+.works .wrapper .button p {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.works .wrapper .button p:hover {
+  color: #fff;
+}
+
+.about .wrapper .title__wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.about .wrapper .about__profile {
+  display: flex;
+  text-align: left;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.about .wrapper .about__profile .about__img img {
+  width: 100%;
+}
+
+.contact .wrapper .title__wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact .wrapper .contact__text {
+  text-align: center;
+}
+.contact .wrapper .contact__text p {
+  display: inline-block;
+  text-align: left;
+}
+
+.contact .wrapper .button {
+  display: inline-block;
+  height: 88px;
+  line-height: 88px;
+  width: 272px;
+  background-color: #E9E9E9;
+  position: relative;
+  text-align: center;
+  border-radius: 45px;
+  margin-top: 32px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .contact .wrapper .button {
+    width: 100%;
+  }
+}
+.contact .wrapper .button:hover {
+  background-color: #333;
+}
+.contact .wrapper .button p {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contact .wrapper .button p:hover {
+  color: #fff;
+}
+
+.fadeInBefore {
+  opacity: 0;
+  transition-duration: 1.2s;
+  transition-property: opacity, transform;
+}
+
+.fadeInAfter {
+  transform: translate(0);
+}
+
+.scroll-in {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+@media screen and (max-width: 1000px) {
+  .service .wrapper .service__menu {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .service .wrapper .service__menu .service__item {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .service .wrapper .service__menu .service__item .service__subtext {
+    text-align: left;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about .wrapper .about__profile {
+    display: flex;
+    flex-flow: column;
+    row-gap: 32px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fv .fv__wrapper .fv__site-title {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+  .fv .fv__wrapper .fv__text {
+    font-size: 1rem;
+    margin-bottom: 12px;
+  }
+  .fv .fv__wrapper .fv__small-text {
+    font-size: 0.75rem;
+  }
+}
+.section__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+@media screen and (max-width: 480px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+
+.sub__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+@media screen and (max-width: 480px) {
+  .sub__title {
+    font-size: 0.75rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+.service__subpage .wrapper {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 104px auto 80px;
+}
+@media screen and (max-width: 768px) {
+  .service__subpage .wrapper {
+    padding: 0 20px;
+  }
+}
+.service__subpage .wrapper .title__wrapper {
+  margin-bottom: 32px;
+}
+
+.service__subpage .wrapper .service__menu {
+  display: inline-block;
+  align-items: center;
+}
+.service__subpage .wrapper .service__menu .service__item {
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.service__subpage .wrapper .service__menu .service__item .service__title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  flex: 1;
+  max-width: 200px;
+}
+.service__subpage .wrapper .service__menu .service__item .service__subtext {
+  text-align: left;
+  flex: 1;
+}
+
+.flow__subpage .wrapper .title__wrapper {
+  margin-bottom: 32px;
+}
+
+.flow__subpage .wrapper .flow-steps {
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  align-items: center;
+  margin: 0 auto;
+}
+.flow__subpage .wrapper .flow-steps .flow-step__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__number {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 1.5rem;
+  height: 48px;
+  line-height: 48px;
+  width: 224px;
+  position: relative;
+  background-color: #D9D9D9;
+}
+.flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__img {
+  margin: 0 40px;
+}
+.flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__text-part {
+  text-align: left;
+  flex: 1;
+}
+.flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__text-part .flow-step__title {
+  font-weight: bold;
+}
+.flow__subpage .wrapper .flow-steps .flow-step__arrow {
+  border-style: solid;
+  border-width: 16px 16px 0 16px;
+  border-color: #333333 transparent transparent transparent;
+  width: 0;
+  height: 0;
+  margin: 0 auto;
+}
+
+.contact .wrapper .title__wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact .wrapper .contact__text {
+  text-align: center;
+}
+.contact .wrapper .contact__text p {
+  display: inline-block;
+  text-align: left;
+}
+
+.contact .wrapper .button {
+  display: inline-block;
+  height: 88px;
+  line-height: 88px;
+  width: 272px;
+  background-color: #E9E9E9;
+  position: relative;
+  text-align: center;
+  border-radius: 45px;
+  margin-top: 32px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .contact .wrapper .button {
+    width: 100%;
+  }
+}
+.contact .wrapper .button:hover {
+  background-color: #333;
+}
+.contact .wrapper .button p {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contact .wrapper .button p:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .service__subpage .wrapper .service__menu .service__item {
+    flex-direction: column;
+  }
+  .flow__subpage .wrapper .flow-steps .flow-step__item {
+    display: block;
+    margin-bottom: 40px;
+  }
+  .flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__number {
+    margin-bottom: 24px;
+  }
+  .flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__img {
+    margin-bottom: 24px;
+  }
+  .flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__text-part {
+    text-align: left;
+    width: 100%;
+    max-width: 400px;
+  }
+  .flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__text-part .flow-step__title {
+    margin-bottom: 4px;
+  }
+  .flow__subpage .wrapper .flow-steps .flow-step__item .flow-step__text-part .flow-step__text {
+    display: inline-block;
+    text-align: left;
+  }
+  .flow-steps .flow-step__arrow {
+    display: none;
+  }
+}
+/** @format */
+.section__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+@media screen and (max-width: 480px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+
+.sub__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+@media screen and (max-width: 480px) {
+  .sub__title {
+    font-size: 0.75rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+.works__subpage .wrapper {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 104px auto 80px;
+}
+@media screen and (max-width: 768px) {
+  .works__subpage .wrapper {
+    padding: 0 20px;
+  }
+}
+.works__subpage .wrapper .title__wrapper {
+  margin-bottom: 32px;
+}
+.works__subpage .wrapper .works__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 88px 56px;
+  justify-content: center;
+}
+.works__subpage .wrapper .works__list .works__list-item .list-item__title {
+  margin-top: 16px;
+  font-weight: bold;
+}
+.works__subpage .wrapper .works__list-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+.works__subpage .wrapper .works__list-pagination .pagination__prev {
+  display: inline-block;
+  vertical-align: middle;
+  color: #E9E9E9;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background: currentColor;
+  box-sizing: content-box;
+  text-align: center;
+  line-height: 2rem;
+  margin-right: 8px;
+}
+.works__subpage .wrapper .works__list-pagination .pagination__prev ::after {
+  content: "";
+  border: 0;
+  border-top: solid 2px #333;
+  border-left: solid 2px #333;
+  display: inline-block;
+  transform: rotate(-45deg);
+  width: 10px;
+  height: 10px;
+}
+.works__subpage .wrapper .works__list-pagination .pagination__next {
+  display: inline-block;
+  vertical-align: middle;
+  color: #E9E9E9;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background: currentColor;
+  box-sizing: content-box;
+  text-align: center;
+  line-height: 2rem;
+  margin-left: 8px;
+}
+.works__subpage .wrapper .works__list-pagination .pagination__next ::after {
+  content: "";
+  border: 0;
+  border-top: solid 2px #333;
+  border-right: solid 2px #333;
+  display: inline-block;
+  transform: rotate(45deg);
+  width: 10px;
+  height: 10px;
+}
+.works__subpage .wrapper .works__list-pagination .page-number {
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  color: #333;
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+  background: #E9E9E9;
+  box-sizing: content-box;
+  text-align: center;
+  line-height: 2rem;
+}
+
+.wp-pagenavi a, .wp-pagenavi span {
+  color: #999;
+  background-color: #FFF;
+  border: solid 1px #999;
+  padding: 8px 15px;
+  margin: 0 2px;
+  white-space: nowrap;
+  border-radius: 3px;
+  transition: 0.2s ease-in-out;
+}
+
+.wp-pagenavi a:hover {
+  color: #FFF;
+  background-color: #999;
+  border-color: #999;
+}
+
+.wp-pagenavi span.current {
+  color: #FFF;
+  background-color: #333;
+  border-color: #333;
+  font-weight: bold;
+}
+
+.contact .wrapper .title__wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact .wrapper .contact__text {
+  text-align: center;
+}
+.contact .wrapper .contact__text p {
+  display: inline-block;
+  text-align: left;
+}
+
+.contact .wrapper .button {
+  display: inline-block;
+  height: 88px;
+  line-height: 88px;
+  width: 272px;
+  background-color: #E9E9E9;
+  position: relative;
+  text-align: center;
+  border-radius: 45px;
+  margin-top: 32px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .contact .wrapper .button {
+    width: 100%;
+  }
+}
+.contact .wrapper .button:hover {
+  background-color: #333;
+}
+.contact .wrapper .button p {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contact .wrapper .button p:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .works__subpage .wrapper .works__list {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px 32px;
+    justify-content: center;
+  }
+  .works__subpage .wrapper .works__list img {
+    max-width: 280px;
+    max-height: 210px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .works__subpage .wrapper .works__list {
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  }
+  .works__subpage .wrapper .works__list img {
+    max-width: 320px;
+    max-height: 200px;
+  }
+}
+.section__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+@media screen and (max-width: 480px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+
+.sub__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+@media screen and (max-width: 480px) {
+  .sub__title {
+    font-size: 0.75rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+.contact__subpage .wrapper {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 104px auto 80px;
+}
+@media screen and (max-width: 768px) {
+  .contact__subpage .wrapper {
+    padding: 0 20px;
+  }
+}
+.contact__subpage .wrapper .title__wrapper {
+  margin-bottom: 80px;
+}
+
+.section__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+@media screen and (max-width: 480px) {
+  .section__title {
+    font-size: 1.5rem;
+  }
+}
+
+.sub__title {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+  margin-top: 4px;
+}
+@media screen and (max-width: 480px) {
+  .sub__title {
+    font-size: 0.75rem;
+  }
+}
+
+.wrapper {
+  width: 100%;
+  padding: 0 40px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto 80px;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+.works__subpage .wrapper {
+  width: 100%;
+  margin-top: 104px;
+  margin-bottom: 80px;
+  padding: 0 80px;
+  text-align: center;
+}
+.works__subpage .wrapper .title__wrapper {
+  margin-bottom: 32px;
+}
+.works__subpage .wrapper .works-site__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 16px 0;
+}
+.works__subpage .wrapper .site__image img {
+  aspect-ratio: 16/10;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.works__subpage .wrapper .work__text {
+  max-width: 800px;
+  display: inline-block;
+  text-align: left;
+  margin: 0 120px;
+}
+.works__subpage .wrapper .work__text .text__title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.works__subpage .wrapper .work__text .text__desc {
+  margin-bottom: 16px;
+}
+.works__subpage .wrapper .post-link {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 16px;
+}
+.works__subpage .wrapper .post-link .arrow__left {
+  position: relative;
+  padding-left: 32px;
+}
+.works__subpage .wrapper .post-link .arrow__left::after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 2px;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(-135deg);
+}
+.works__subpage .wrapper .post-link .arrow__right {
+  position: relative;
+  padding-right: 32px;
+}
+.works__subpage .wrapper .post-link .arrow__right::after {
+  content: "";
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 2px;
+  width: 18px;
+  height: 18px;
+  border-top: 2px solid #333;
+  border-right: 2px solid #333;
+  transform: rotate(45deg);
+}
+.works__subpage .wrapper .button {
+  display: inline-block;
+  height: 88px;
+  line-height: 88px;
+  width: 272px;
+  background-color: #E9E9E9;
+  position: relative;
+  text-align: center;
+  border-radius: 45px;
+  margin-top: 56px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .works__subpage .wrapper .button {
+    width: 100%;
+  }
+}
+.works__subpage .wrapper .button a span {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.contact .wrapper .title__wrapper {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.contact .wrapper .contact__text {
+  text-align: center;
+}
+.contact .wrapper .contact__text p {
+  display: inline-block;
+  text-align: left;
+}
+
+.contact .wrapper .button {
+  display: inline-block;
+  height: 88px;
+  line-height: 88px;
+  width: 272px;
+  background-color: #E9E9E9;
+  position: relative;
+  text-align: center;
+  border-radius: 45px;
+  margin-top: 32px;
+  margin-bottom: 0px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+@media screen and (max-width: 480px) {
+  .contact .wrapper .button {
+    width: 100%;
+  }
+}
+.contact .wrapper .button:hover {
+  background-color: #333;
+}
+.contact .wrapper .button p {
+  color: #333;
+  font-family: "Roboto", "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+}
+.contact .wrapper .button p:hover {
+  color: #fff;
+}
+
+@media screen and (max-width: 1000px) {
+  .works__subpage .wrapper .site__image img {
+    width: 480px;
+    height: 300px;
+  }
+  .works__subpage .wrapper .work__text {
+    max-width: 100%;
+    text-align: left;
+    margin: 0 20px;
+  }
+  .works__subpage .wrapper .work__text .text__desc {
+    text-align: left;
+    display: inline-block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .works__subpage .wrapper {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .works__subpage .wrapper .site__image img {
+    width: 240px;
+    height: 150px;
+  }
+}
+/*
+全てのscssを読み込むファイル
+@useで読み込むこと
+*//*# sourceMappingURL=styles.css.map */
